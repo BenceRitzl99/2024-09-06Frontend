@@ -11,19 +11,20 @@
     <div *ngFor="let oszlopNev of oszlopok" class="col">
       <input [(ngModel)]="ujEmber[oszlopNev]" type="text" class="form-control">
       </div> 
-    <div class="col">
+    
+      <div class="col">
       
       <button (click)="hozzaAd()" type="button" class="btn mt-2 btn-success">Hozzáadás</button>
       
   
     </div>
-    
-  </div>
+    </div>
   <div *ngFor="let ember of emberek" class="row">
     <div *ngFor="let oszlopNev of oszlopok" class="col">
       <input [(ngModel)]="ember[oszlopNev]" type="text" class="form-control">
       </div> 
-    <div class="col">
+    
+      <div class="col">
       
       <button [ngClass]="ember.Nem == 'Férfi'? 'btn-warning' : 'btn-danger'" (click)="torles( ember)" type="button" class="btn mt-2">Törlés</button>
       
